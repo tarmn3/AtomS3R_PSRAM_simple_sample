@@ -13,9 +13,10 @@ static int      currentImg = 0;
 void setup() {
   // 1) Initialize M5AtomS3R and USB CDC serial
   M5.begin();
+  M5.Lcd.println("Hello");
   Serial.begin(115200);
-  while (!Serial) { delay(10); }
-  Serial.println("Serial OK");
+  //while (!Serial) { delay(10); }
+  //Serial.println("Serial OK");
 
   // 2) LCD test
   M5.Lcd.fillScreen(BLACK);
